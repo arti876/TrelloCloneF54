@@ -1,15 +1,11 @@
 import {
   taskListBodyTodo,
-  taskListBtnAddTodo,
   formAddTodo,
   formInputTitle,
   formInputDescription,
-  formВtnCancel,
   formВtnConfirm,
   formSelectUser,
-  controls,
   board,
-  taskListBody,
   taskListBodyInProgress,
   taskListBodyDone,
   warning,
@@ -17,10 +13,6 @@ import {
   warningText,
   goTopBtn,
   trelloWrapper,
-  taskListBtnShowAll,
-  taskListBtnShowAllTodo,
-  taskListBtnShowAllInProgress,
-  taskListBtnShowAllDone,
 } from './refs.js'; // получение переменных
 import {
   statusTaskСhange,
@@ -37,18 +29,13 @@ import {
   showAllCards,
 } from './functionEvent.js' // functionEvent
 import { startTime, } from './clock.js'; // часы
-// import { v4 as uuidv4 } from 'uuid'; // рандом id
-import { getDay, getTime } from './getData.js' // получить текущую дату и время
 import { updateCounter } from './updateCounter.js' // обновление счетчиков Todos
-import { createDiv, createButton, } from './htmlCreateElement.js' // создание элементов html
 import { addTodo, pressCancel, pressConfirmAddNewTask, pressConfirmEdit } from './modalFormTodo.js' //модальное окно FormTodo
 import { getTrelloData } from './getTrelloData.js' // получение данных с jsonplaceholder
 import { getData, setData } from './localStorage.js'// запись-чтение данных localStorage
 import { createTodoCard } from './createTodoCard.js' // создание новой карточки дел
 import { addNameInForm } from './addNameInForm.js' //добавить имена из загружаемых данных в форму
 import { trackScroll, goTop } from './trackScroll.js' //кнопка вверх
-import { createTodoObj } from './createTodoObj.js' //создать объект Todo
-import { randomCompleted, randomDay, randomTime, generateUUID } from './getRandom.js' // рандом статуса Todo, даты, времени
 
 const runTrelloApplication = async () => {
   // часы

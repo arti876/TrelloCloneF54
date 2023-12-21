@@ -1,6 +1,6 @@
 import { formInputTitle, formInputDescription, formSelectUser } from './refs.js'; // получение переменных
 import { getDay, getTime } from './getData.js' // получить текущую дату и время
-import { randomCompleted, randomDay, randomTime, generateUUID } from './getRandom.js' // рандом статуса Todo, даты, времени
+import { generateUUID } from './getRandom.js' // рандом статуса Todo, даты, времени
 
 function createTodoObj() {
   const userId = generateUUID();
